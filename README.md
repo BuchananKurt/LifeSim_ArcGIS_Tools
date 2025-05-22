@@ -10,8 +10,10 @@ The LifeSim Supplementary ArcGIS Python Toolboxes have been developed by LifeSim
 ## Python Toolbox Installation
 
 1. **Download the repository as a .pyt file**
+    - Click on each file in the list above.
+    - In the upper right corner, a dropdown allows you to download the raw file.
 
-2. **Add the toolbox in ArcGIS Pro:**
+3. **Add the toolbox in ArcGIS Pro:**
    - Open the Catalog pane.
    - Right-click on **Toolboxes** > **Add Toolbox**.
    - Select the `.pyt` file from this repository.
