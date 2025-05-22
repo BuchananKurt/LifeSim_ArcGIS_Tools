@@ -1,9 +1,11 @@
 # LifeSim Supplementary ArcGIS Python Toolboxes
 
-The LifeSim Supplementary ArcGIS Python Toolboxes have been developed by LifeSim users to assist in pre-processing and post-processing data from LifeSim. For more information on LifeSim, see https://github.com/USACE-RMC/LifeSim. The tools are comprised of two separate python toolbox files:
+The LifeSim Supplementary ArcGIS Python Toolboxes have been developed by LifeSim users to assist in pre-processing and post-processing data from LifeSim. For more information on LifeSim, see https://github.com/USACE-RMC/LifeSim. The tools are comprised of two separate python toolbox files. There is also an excel toolbox that takes summary data copied directly from LifeSim and formats it to produce more tables.
 
 ### [LifeSim GIS Preprocessing Python Toolbox](#lifesim-gis-preprocessing-python-toolbox)
 ### [LifeSim Results Python Toolbox](#lifesim-results-python-toolbox)
+### [LifeSim Excel Toolbox](#lifesim-excel-toolbox)
+### [Further Resources](#further-resources)
 
 ## Required Software
     - ArcGIS Pro 3.0 or newer
@@ -173,3 +175,8 @@ The LifeSim Results Python Toolbox uses SQL queries to read data from the LifeSi
 | Check to export alternative results to geopackage (experimental)          | Exports day and night alternative results into a new geopackage in the LifeSim directory for use in GIS software. Also exports the structure in each scenario with the highest fatality rate for identifying the drivers of individual risk (will have IR in the layer name). Process may error and needs work, also it takes longer. Recommend selecting an optional alternative if you only need this for one or two alternatives.            | Boolean  |
 ___
 [^Back to top](#lifesim-supplementary-arcgis-python-toolboxes)
+## LifeSim Excel Toolbox
+The LifeSim Excel Toolbox takes the summary results tables from LifeSim as an input (just copy/paste into excel) and primarily uses pivot tables to create various tables and graphs that can be customized using dropdown menus and vlookups. There is an Instruction tab that details how to input the data and to set the scenario mapping.
+___
+## Further Resources
+There is a set of training videos available on YouTube that use slightly older versions of the pre-processing toolbox and the excel toolbox. These are available at https://www.youtube.com/playlist?list=PLCYnGQpA5NVbWlp1oIGDF74CjODRR31K2
