@@ -2,8 +2,8 @@
 
 The LifeSim Supplementary ArcGIS Python Toolboxes have been developed by LifeSim users to assist in pre-processing and post-processing data from LifeSim. For more information on LifeSim, see https://github.com/USACE-RMC/LifeSim. The tools are comprised of two separate python toolbox files. There is also an excel toolbox that takes summary data copied directly from LifeSim and formats it to produce more tables.
 
-**[LifeSim GIS Preprocessing Python Toolbox](#lifesim-gis-preprocessing-python-toolbox)**
-**[LifeSim Results Python Toolbox](#lifesim-results-python-toolbox)**
+**[LifeSim GIS Preprocessing Python Toolbox](#lifesim-gis-preprocessing-python-toolbox)**<br>
+**[LifeSim Results Python Toolbox](#lifesim-results-python-toolbox)**<br>
 **[LifeSim Excel Toolbox](#lifesim-excel-toolbox)**
 **[Further Resources](#further-resources)**
 
