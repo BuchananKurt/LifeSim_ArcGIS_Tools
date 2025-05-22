@@ -4,8 +4,8 @@ The LifeSim Supplementary ArcGIS Python Toolboxes have been developed by LifeSim
 
 **[LifeSim GIS Preprocessing Python Toolbox](#lifesim-gis-preprocessing-python-toolbox)**<br>
 **[LifeSim Results Python Toolbox](#lifesim-results-python-toolbox)**<br>
-**[LifeSim Excel Toolbox](#lifesim-excel-toolbox)**
-**[Further Resources](#further-resources)**
+**[LifeSim Excel Toolbox](#lifesim-excel-toolbox)**<br>
+**[Further Resources](#further-resources)**<br>
 
 ## Required Software
     - ArcGIS Pro 3.0 or newer
