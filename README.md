@@ -22,7 +22,7 @@ The LifeSim Supplementary ArcGIS Python Toolboxes have been developed by LifeSim
    - Right-click on **Toolboxes** > **Add Toolbox**.
    - Select the `.pyt` file from this repository.
 
-## LifeSim GIS Preprocessing Python Toolbox - Tool List
+## LifeSim GIS Preprocessing Python Toolbox
 
 **[Buffer and Simplify a Polygon](#buffer-and-simplify-a-polygon)**
 
