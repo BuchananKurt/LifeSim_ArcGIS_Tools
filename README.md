@@ -42,6 +42,8 @@ The LifeSim Supplementary ArcGIS Python Toolboxes have been developed by LifeSim
 
 **[Snap Structures to Exclusion Polygon](#snap-structures-to-exclusion-polygon)** 
 
+**[Download NLD Levees from API](#download-nld-levees-from-api)**
+
 ## LifeSim GIS Preprocessing Python Toolbox - Tool Parameters
 
 ### Buffer and Simplify a Polygon
@@ -157,6 +159,15 @@ This tool takes a point shapefile structure inventory, selects the points that a
 | Exclusion Polygon            | Shapefile for in-pool area                                                  | Feature Layer  |
 | Distance to move structures out of polygon (ft)   | Distance in feet that points will be relocated to outside of the exclusion zone                                                 | Feature Layer  |
 | Output NSI File Name (no extension)               | Output location and file name                                                              | Shapefile        |
+___
+[^Back to top](#lifesim-supplementary-arcgis-python-toolboxes)
+### Download NLD Levees from API
+This tool takes a study area polygon, connects to the National Levee Database map service, and downloads the levee are polygons that are within the bounding box of that polygon. The data is in lat/lon WGS84 projection, but the tool reprojects it to whatever the input polygon projection is. 
+
+| Parameter                    | Explanation                                                                 | Data Type      |
+|------------------------------|-----------------------------------------------------------------------------|----------------|
+| Input Study Area Polygon      | Input polygon shapefile                                                    | Feature Layer  |
+| Output Levee Polygon           | Output location and file name                                                 | Feature Layer  |
 ___
 [^Back to top](#lifesim-supplementary-arcgis-python-toolboxes)
 ## LifeSim Results Python Toolbox
