@@ -8,6 +8,8 @@ The LifeSim Supplementary ArcGIS Python Toolboxes have been developed by LifeSim
 **[LifeSim Excel Toolbox](#lifesim-excel-toolbox)**<br>
 **[Further Resources](#further-resources)**<br>
 
+![Main UI screenshot](images/tools_expanded.png)
+
 ## Required Software
     - ArcGIS Pro 3.0 or newer
     - LifeSim 2.1.3 or newer
@@ -172,7 +174,8 @@ This tool takes a study area polygon, connects to the National Levee Database ma
 ___
 [^Back to top](#lifesim-supplementary-arcgis-python-toolboxes)
 ## LifeSim Results Python Toolbox
-The LifeSim Results Python Toolbox uses SQL queries to read data from the LifeSim .fia file, summarizes the data in meaningful ways, and writes the summary outputs to an Excel file. 
+The LifeSim Results Python Toolbox uses SQL queries to read data from the LifeSim .fia file, summarizes the data in meaningful ways, and writes the summary outputs to an Excel file.   
+![LifeSim Results inputs](images/lifesim_results_inputs.png)
 
 | Parameter              | Explanation                                               | Data Type      |
 |------------------------|----------------------------------------------------------|----------------|
@@ -185,13 +188,15 @@ The LifeSim Results Python Toolbox uses SQL queries to read data from the LifeSi
 | Summary Areas (optional)| Autopopulates with a list of summary area polygons included in the simulation run. If one is selected, the script only runs on that summary area set instead of all summary area sets in the simulation.             | Dynamic List  |
 | Check to Flag MMC SOP Violations          | Selected by default. If selected, the script will flag possible violations where parameters such as warning times and curves are not set to the standard MMC SOP parameters. Violations will be in red text.              | Boolean  |
 | Check to export alternative results to geopackage (experimental)          | Exports day and night alternative results into a new geopackage in the LifeSim directory for use in GIS software. Also exports the structure in each scenario with the highest fatality rate for identifying the drivers of individual risk (will have IR in the layer name). Process may error and needs work, also it takes longer. Recommend selecting an optional alternative if you only need this for one or two alternatives.            | Boolean  |
-___
+___  
+![LifeSim Results screenshot](images/lifesim_results_output1.png)  
 [^Back to top](#lifesim-supplementary-arcgis-python-toolboxes)
 
 ## HDF Hydrograph Tool
 ___
 ### Get HDF Plan Information
-This tool creates an excel report with data from all of the HDF files in a RAS or LifeSim folder, including plan numbers, names, and breach data such as breach time, dimensions, and flows. If a storage area and crest height are provided, it reports the peak water surface and volume of the storage area and the time if it exceeds the crest elevation. 
+This tool creates an excel report with data from all of the HDF files in a RAS or LifeSim folder, including plan numbers, names, and breach data such as breach time, dimensions, and flows. If a storage area and crest height are provided, it reports the peak water surface and volume of the storage area and the time if it exceeds the crest elevation.  
+![HDF Plan Info screenshot](images/RAS_Plan_Data_Excel.png)
 
 | Parameter                    | Explanation                                                                 | Data Type      |
 |------------------------------|-----------------------------------------------------------------------------|----------------|
