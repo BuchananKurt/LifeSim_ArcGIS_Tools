@@ -173,8 +173,9 @@ This tool takes a study area polygon, connects to the National Levee Database ma
 | Output Levee Polygon           | Output location and file name                                                 | Feature Layer  |
 ___
 [^Back to top](#lifesim-supplementary-arcgis-python-toolboxes)
+
 ## LifeSim Results Python Toolbox
-The LifeSim Results Python Toolbox uses SQL queries to read data from the LifeSim .fia file, summarizes the data in meaningful ways, and writes the summary outputs to an Excel file.   
+The LifeSim Results Python Toolbox uses SQL queries to read simulation data from the LifeSim .fia file, summarizes the data in meaningful ways, and writes the summary outputs to an Excel file. The output will have a summary tab (show in the figure below the parameter table) and a tab for each Alternative. Parameters are reported out, including some hydraulic data, and LifeSim results are provided as summaries, arrival time ranges, and summary polygons. Top ten structures and roads by life loss are reported.    
 ![LifeSim Results inputs](images/lifesim_results_inputs.png)
 
 | Parameter              | Explanation                                               | Data Type      |
