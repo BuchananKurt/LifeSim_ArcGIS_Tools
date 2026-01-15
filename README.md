@@ -209,7 +209,7 @@ ___
 [^Back to top](#lifesim-supplementary-arcgis-python-toolboxes)
 
 ### Breach and NonBreach Hydrographs
-This tool creates failure and non-failure hydrographs in excel based on a user-provided point shapefile and HDF hydrograph files. Recommend running the Get HDF Plan Information tool first in order to know which HDF file numbers to select.
+This tool creates failure and non-failure hydrographs in excel based on a user-provided point shapefile and HDF hydrograph files. Recommend running the Get HDF Plan Information tool first in order to know which HDF file numbers to select. The tool requires the RAS geometry to extract the water surface elevations for each point, including any 2D cells, 1D storage areas, and cross sections. The script will look for those shapefiles in the output folder and if they are not there (which they won't be the first time you run it) it will create them. If the tool is ran again with different HDF files, use the same folder and it will run quicker because it does not have to create the geometry.
 
 | Parameter                    | Explanation                                                                 | Data Type      |
 |------------------------------|-----------------------------------------------------------------------------|----------------|
@@ -219,7 +219,7 @@ This tool creates failure and non-failure hydrographs in excel based on a user-p
 | (info only) Breach ShortID           | Info field that shows the short ID of the HDF selected above.                                                | Info Only  |
 | Input NonBreach HDF File           | HDF file from HEC-RAS or LifeSim hydraulic data.                                                | HDF Fil  |
 | (info only) Breach ShortID           | Info field that shows the short ID of the HDF selected above.                                                | Info Only  |
-| Output Folder           | Output location where excel file and RAS geometry files will be deposited.                                               | Folder  |
+| Output Folder           | Output location where excel file and RAS geometry files will be deposited. If running multiple times, use the same folder.                                               | Folder  |
 | Hazard Time in Hours From Start (optional)           | If provided, a vertical hashed line will appear on the hydrograph plot representing the Hazard Time.                                                | Number  |
 | Check to delete interim join files           | Checked by default. Several spatial joins are used in the process, those interim files are deleted unless unchecked.                                                | Boolean  |
 | Check to add times to input points           | Arrival time, peak time, and peak depth are added to the point shapefile if selected. Field name will have the RAS plan number (p01 to p99) on it, allowing the input points to be used multiple times on different HDF file sets.                                                | Boolean  |
