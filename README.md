@@ -1,6 +1,6 @@
 # LifeSim Supplementary ArcGIS Python Toolboxes
 
-The LifeSim Supplementary ArcGIS Python Toolboxes have been developed by LifeSim users to assist in pre-processing and post-processing data from LifeSim. For more information on LifeSim, see https://github.com/USACE-RMC/LifeSim. The tools are comprised of two separate python toolbox files. There is also an excel toolbox that takes summary data copied directly from LifeSim and formats it to produce more tables.
+The LifeSim Supplementary ArcGIS Python Toolboxes have been developed by LifeSim users to assist in pre-processing and post-processing data from LifeSim. For more information on LifeSim, see https://github.com/USACE-RMC/LifeSim. The tools are comprised of three separate python toolbox files. There is also an excel toolbox that takes summary data copied directly from LifeSim and formats it to produce more tables.
 
 **[LifeSim GIS Preprocessing Python Toolbox](#lifesim-gis-preprocessing-python-toolbox)**<br>
 **[LifeSim Results Python Toolbox](#lifesim-results-python-toolbox)**<br>
@@ -190,8 +190,20 @@ ___
 
 ## HDF Hydrograph Tool
 ___
+### Get HDF Plan Information
+This tool creates an excel report with data from all of the HDF files in a RAS or LifeSim folder, including plan numbers, names, and breach data such as breach time, dimensions, and flows. If a storage area and crest height are provided, it reports the peak water surface and volume of the storage area and the time if it exceeds the crest elevation. 
+
+| Parameter                    | Explanation                                                                 | Data Type      |
+|------------------------------|-----------------------------------------------------------------------------|----------------|
+| RAS or LifeSim Folder        | Input folder, typically the main RAS folder or LifeSim folder.                                                    | Folder  |
+| Check if this is a LifeSim folder           | If unchecked, only HDF files in the main folder are evaluated. If checked, this will look for all HDF including in subfolders like LifeSim uses.                                                | Boolean  |
+| Dam Storage Area Name           | (Optional) Dropdown selection with list of all 1D storage areas in the model. Select the one that represents the reservoir. If nothing is selected the report will still generate with plenty of data, just not the storage area peak elevation and volume.                                                | Dynamic List  |
+| Dam Crest Elevation           | (Optional) If entered, the "OT Time" field in the excel report will contain the time at which the storage area stage exceeds the dam crest elevation.                                                | Decimal Number  |
+___
+[^Back to top](#lifesim-supplementary-arcgis-python-toolboxes)
+
 ### Breach and NonBreach Hydrographs
-This tool creates failure and non-failure hydrographs in excel based on a user-provided point shapefile and HDF hydrograph files. 
+This tool creates failure and non-failure hydrographs in excel based on a user-provided point shapefile and HDF hydrograph files. Recommend running the Get HDF Plan Information tool first in order to know which HDF file numbers to select.
 
 | Parameter                    | Explanation                                                                 | Data Type      |
 |------------------------------|-----------------------------------------------------------------------------|----------------|
@@ -205,18 +217,7 @@ This tool creates failure and non-failure hydrographs in excel based on a user-p
 | Hazard Time in Hours From Start (optional)           | If provided, a vertical hashed line will appear on the hydrograph plot representing the Hazard Time.                                                | Number  |
 | Check to delete interim join files           | Checked by default. Several spatial joins are used in the process, those interim files are deleted unless unchecked.                                                | Boolean  |
 | Check to add times to input points           | Arrival time, peak time, and peak depth are added to the point shapefile if selected. Field name will have the RAS plan number (p01 to p99) on it, allowing the input points to be used multiple times on different HDF file sets.                                                | Boolean  |
-___
-[^Back to top](#lifesim-supplementary-arcgis-python-toolboxes)
-___
-### Get HDF Plan Information
-This tool creates an excel report with data from all of the HDF files in a RAS or LifeSim folder, including plan numbers, names, and breach data such as breach time, dimensions, and flows. If a storage area and crest height are provided, it reports the peak water surface and volume of the storage area and the time if it exceeds the crest elevation. 
-
-| Parameter                    | Explanation                                                                 | Data Type      |
-|------------------------------|-----------------------------------------------------------------------------|----------------|
-| RAS or LifeSim Folder        | Input folder, typically the main RAS folder or LifeSim folder.                                                    | Folder  |
-| Check if this is a LifeSim folder           | If unchecked, only HDF files in the main folder are evaluated. If checked, this will look for all HDF including in subfolders like LifeSim uses.                                                | Boolean  |
-| Dam Storage Area Name           | (Optional) Dropdown selection with list of all 1D storage areas in the model. Select the one that represents the reservoir. If nothing is selected the report will still generate with plenty of data, just not the storage area peak elevation and volume.                                                | Dynamic List  |
-| Dam Crest Elevation           | (Optional) If entered, the "OT Time" field in the excel report will contain the time at which the storage area stage exceeds the dam crest elevation.                                                | Decimal Number  |
+                              | Decimal Number  |
 ___
 [^Back to top](#lifesim-supplementary-arcgis-python-toolboxes)
 
