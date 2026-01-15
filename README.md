@@ -4,6 +4,7 @@ The LifeSim Supplementary ArcGIS Python Toolboxes have been developed by LifeSim
 
 **[LifeSim GIS Preprocessing Python Toolbox](#lifesim-gis-preprocessing-python-toolbox)**<br>
 **[LifeSim Results Python Toolbox](#lifesim-results-python-toolbox)**<br>
+**[HDF Hydrograph Tool](#hdf-hydrograph-tool)**<br>
 **[LifeSim Excel Toolbox](#lifesim-excel-toolbox)**<br>
 **[Further Resources](#further-resources)**<br>
 
@@ -186,6 +187,39 @@ The LifeSim Results Python Toolbox uses SQL queries to read data from the LifeSi
 | Check to export alternative results to geopackage (experimental)          | Exports day and night alternative results into a new geopackage in the LifeSim directory for use in GIS software. Also exports the structure in each scenario with the highest fatality rate for identifying the drivers of individual risk (will have IR in the layer name). Process may error and needs work, also it takes longer. Recommend selecting an optional alternative if you only need this for one or two alternatives.            | Boolean  |
 ___
 [^Back to top](#lifesim-supplementary-arcgis-python-toolboxes)
+
+## HDF Hydrograph Tool
+___
+### Breach and NonBreach Hydrographs
+This tool creates failure and non-failure hydrographs in excel based on a user-provided point shapefile and HDF hydrograph files. 
+
+| Parameter                    | Explanation                                                                 | Data Type      |
+|------------------------------|-----------------------------------------------------------------------------|----------------|
+| Input Points Shapefile      | Input point shapefile with unique names for each point. Excel tabs will be the point name.                                                    | Feature Layer  |
+| Input Points Name Field           | Dropdown for selecting which field in the shapefile represents the name.                                                | Field List  |
+| Input Breach HDF File           | HDF file from HEC-RAS or LifeSim hydraulic data.                                                | HDF File  |
+| (info only) Breach ShortID           | Info field that shows the short ID of the HDF selected above.                                                | Info Only  |
+| Input NonBreach HDF File           | HDF file from HEC-RAS or LifeSim hydraulic data.                                                | HDF Fil  |
+| (info only) Breach ShortID           | Info field that shows the short ID of the HDF selected above.                                                | Info Only  |
+| Output Folder           | Output location where excel file and RAS geometry files will be deposited.                                               | Folder  |
+| Hazard Time in Hours From Start (optional)           | If provided, a vertical hashed line will appear on the hydrograph plot representing the Hazard Time.                                                | Number  |
+| Check to delete interim join files           | Checked by default. Several spatial joins are used in the process, those interim files are deleted unless unchecked.                                                | Boolean  |
+| Check to add times to input points           | Arrival time, peak time, and peak depth are added to the point shapefile if selected. Field name will have the RAS plan number (p01 to p99) on it, allowing the input points to be used multiple times on different HDF file sets.                                                | Boolean  |
+___
+[^Back to top](#lifesim-supplementary-arcgis-python-toolboxes)
+___
+### Get HDF Plan Information
+This tool creates an excel report with data from all of the HDF files in a RAS or LifeSim folder, including plan numbers, names, and breach data such as breach time, dimensions, and flows. If a storage area and crest height are provided, it reports the peak water surface and volume of the storage area and the time if it exceeds the crest elevation. 
+
+| Parameter                    | Explanation                                                                 | Data Type      |
+|------------------------------|-----------------------------------------------------------------------------|----------------|
+| RAS or LifeSim Folder        | Input folder, typically the main RAS folder or LifeSim folder.                                                    | Folder  |
+| Check if this is a LifeSim folder           | If unchecked, only HDF files in the main folder are evaluated. If checked, this will look for all HDF including in subfolders like LifeSim uses.                                                | Boolean  |
+| Dam Storage Area Name           | (Optional) Dropdown selection with list of all 1D storage areas in the model. Select the one that represents the reservoir. If nothing is selected the report will still generate with plenty of data, just not the storage area peak elevation and volume.                                                | Dynamic List  |
+| Dam Crest Elevation           | (Optional) If entered, the "OT Time" field in the excel report will contain the time at which the storage area stage exceeds the dam crest elevation.                                                | Decimal Number  |
+___
+[^Back to top](#lifesim-supplementary-arcgis-python-toolboxes)
+
 ## LifeSim Excel Toolbox
 The LifeSim Excel Toolbox takes the summary results tables from LifeSim as an input (just copy/paste into excel) and primarily uses pivot tables to create various tables and graphs that can be customized using dropdown menus and vlookups. There is an Instruction tab that details how to input the data and to set the scenario mapping.
 ___
