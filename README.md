@@ -202,7 +202,7 @@ This tool creates an excel report with data from all of the HDF files in a RAS o
 | Parameter                    | Explanation                                                                 | Data Type      |
 |------------------------------|-----------------------------------------------------------------------------|----------------|
 | RAS or LifeSim Folder        | Input folder, typically the main RAS folder or LifeSim folder.                                                    | Folder  |
-| Check if this is a LifeSim folder           | If unchecked, only HDF files in the main folder are evaluated. If checked, this will look for all HDF including in subfolders like LifeSim uses.                                                | Boolean  |
+| Check to search subfolders           | If unchecked, only HDF files in the main folder are evaluated. If checked, this will look for all HDF including in subfolders like LifeSim uses.                                                | Boolean  |
 | Dam Storage Area Name           | (Optional) Dropdown selection with list of all 1D storage areas in the model. Select the one that represents the reservoir. If nothing is selected the report will still generate with plenty of data, just not the storage area peak elevation and volume.                                                | Dynamic List  |
 | Dam Crest Elevation           | (Optional) If entered, the "OT Time" field in the excel report will contain the time at which the storage area stage exceeds the dam crest elevation.                                                | Decimal Number  |
 ___
