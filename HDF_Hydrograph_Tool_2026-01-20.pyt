@@ -1552,6 +1552,8 @@ class Hdfplannames(object):
         # get file path used to help with a downloaded DST model to figure out where all the plans came from
         if lifesim:
             get_file_path = True
+        else:
+            get_file_path = False
         #get_file_path = False
 
         #get list of all .hdf files in the rasfolder
@@ -1992,6 +1994,7 @@ class Hdfplannames(object):
         
 
         return
+
 
 
 
