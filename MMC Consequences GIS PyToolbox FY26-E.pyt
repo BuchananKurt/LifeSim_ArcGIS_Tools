@@ -740,7 +740,7 @@ class Nsicreatorapi(object):
             datatype="GPString",
             parameterType="Required",
             direction="Output")
-        outputname.value = "NSI2022_2026pricelevel"
+        outputname.value = "NSI2026_2026pricelevel"
         addfianame = arcpy.Parameter(
             displayName="Check to add name field for FIA",
             name="Check to add name field",
